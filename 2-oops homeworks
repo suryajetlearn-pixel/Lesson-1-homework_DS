@@ -1,0 +1,55 @@
+# Parent class
+class Car:
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+
+    def start(self):
+        print(self.brand, "car is starting")
+
+    def display_info(self):
+        print("Brand:", self.brand)
+        print("Color:", self.color)
+
+
+# Child class 1
+class Sedan(Car):
+    def open_trunk(self):
+        print("Sedan has a separate boot")
+
+
+# Child class 2
+class Hatchback(Car):
+    def fold_seats(self):
+        print("Hatchback seats can be folded")
+
+
+# Child class 3
+class SUV(Car):
+    def off_road(self):
+        print("SUV is suitable for off-road driving")
+
+
+# Creating objects
+car1 = Sedan("Honda", "White")
+car2 = Hatchback("Maruti", "Red")
+car3 = SUV("Toyota", "Black")
+
+# Sedan
+car1.display_info()
+car1.start()
+car1.open_trunk()
+
+print()
+
+# Hatchback
+car2.display_info()
+car2.start()
+car2.fold_seats()
+
+print()
+
+# SUV
+car3.display_info()
+car3.start()
+car3.off_road()
